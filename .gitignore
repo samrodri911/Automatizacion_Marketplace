@@ -1,0 +1,42 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+scratch/
+debug_dom_report.json
+
+# Datos de la aplicación (locales, no deben subirse al repositorio)
+data/marketplace.db
+data/browser_profile/
+data/products/
+logs/
+screenshots/
+
+# Excepto un .gitkeep para conservar la carpeta vacía en git si se desea
+!data/products/.gitkeep
+!logs/.gitkeep
+!screenshots/.gitkeep
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+playwright_browsers/

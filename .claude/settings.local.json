@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/Scripts/python.exe -c \"import playwright; print\\(playwright.__version__\\)\")",
+      "Bash(.venv/Scripts/python.exe -c \"import PySide6; print\\(PySide6.__version__\\)\")"
+    ]
+  }
+}
