@@ -1,0 +1,36 @@
+# Git & IDEs
+.git/
+.github/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python & Entornos virtuales
+.venv/
+venv/
+env/
+build/
+dist/
+*.spec
+.pytest_cache/
+scratch/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Binarios locales
+playwright_browsers/
+node_modules/
+
+# Datos de usuario (montados por volumen)
+data/marketplace.db
+data/browser_profile/
+data/products/*
+!data/products/.gitkeep
+logs/*
+!logs/.gitkeep
+screenshots/*
+!screenshots/.gitkeep
+debug_dom_report.json

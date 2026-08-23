@@ -135,6 +135,26 @@ El proyecto está preparado para compilarse en una distribución autocontenida u
 
 ---
 
+## 🐳 Ejecución con Docker y Docker Compose
+
+El proyecto incluye soporte completo para ejecutarse en contenedores Docker mediante un display virtual (Xvfb) y acceso visual vía navegador web (**noVNC**).
+
+### 1. Iniciar la aplicación en Docker:
+```bash
+docker compose up app
+```
+Una vez iniciado, abre tu navegador web en:
+👉 **[http://localhost:6080/vnc.html](http://localhost:6080/vnc.html)** (haz clic en *Connect*) para interactuar directamente con la interfaz gráfica de Marketplace Manager y el navegador Chromium.
+
+### 2. Ejecutar la suite de pruebas en Docker:
+```bash
+docker compose run --rm tests
+```
+
+*Los volúmenes `data/`, `logs/` y `screenshots/` están montados automáticamente para conservar la base de datos y la sesión de Facebook entre reinicios del contenedor.*
+
+---
+
 ## 🧪 Pruebas Automatizadas
 
 La aplicación cuenta con una suite completa de más de 240 pruebas unitarias y de integración que cubren la lógica de negocio, parsing, algoritmos de matching, FSM y rutas de empaquetado (sin depender de conexión real a Facebook):

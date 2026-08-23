@@ -38,7 +38,7 @@ BASE_DIR: Path = _resolve_base_dir()
 # En desarrollo, apuntamos a la carpeta 'playwright_browsers' de la raíz del proyecto.
 if getattr(sys, "frozen", False):
     os.environ["PLAYWRIGHT_BROWSERS_PATH"] = str(Path(sys._MEIPASS) / "playwright_browsers")
-else:
+elif "PLAYWRIGHT_BROWSERS_PATH" not in os.environ:
     os.environ["PLAYWRIGHT_BROWSERS_PATH"] = str(BASE_DIR / "playwright_browsers")
 
 DATA_DIR: Path = BASE_DIR / "data"
